@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64      = {{file}}
+$url64      = '{{file}}'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -10,7 +10,7 @@ $packageArgs = @{
 
   softwareName  = 'LibreWolf'
 
-  checksum64    = {{checksum}}
+  checksum64    = '{{checksum}}'
   checksumType64= 'sha256'
 
   silentArgs   = '/S'

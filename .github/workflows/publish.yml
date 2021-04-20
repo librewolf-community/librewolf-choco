@@ -20,10 +20,9 @@ jobs:
         id: checksum
         run: echo "::set-output name=checksum::$((CertUtil -hashfile setup.exe SHA256)[1] -replace ' ',''))"
       - name: Insert data
-        uses: datamonsters/replace-action@v2
-        with:
-          files: "tools/chocolateyinstall.ps1,librewolf.nuspec"
-          replacements: "{{version}}=${{github.event.inputs.version}},{{file}}=${{github.event.inputs.file}},{{checksum}}=${{steps.checksum.outputs.checksum}}"
+        run: |
+          (Get-Content librewolf.nuspec).replace('{{version}}', '${{github.event.inputs.version}}') | Set-Content librewolf.nuspec
+          (Get-Content tools/chocolateyinstall.ps1).replace('{{file}}', '${{github.event.inputs.file}}').replace('{{checksum}}', '${{steps.checksum.outputs.checksum}}') | Set-Content tools/chocolateyinstall.ps1
       - name: Create .nupkg
         uses: crazy-max/ghaction-chocolatey@v1
         with:
