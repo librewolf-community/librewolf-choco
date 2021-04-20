@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>librewolf</id>
-    <version>88.0.0</version>
+    <version>{{version}}</version>
     <title>librewolf (Install)</title>
     <authors>Librewolf contributors</authors>
     <projectUrl>https://gitlab.com/librewolf-community/browser/windows</projectUrl>
