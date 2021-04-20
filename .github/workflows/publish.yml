@@ -1,0 +1,39 @@
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version number
+        required: true
+      file:
+        description: File URL
+        required: true
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download file
+        run: (new-object System.Net.WebClient).DownloadFile("${{ github.event.inputs.file }}","setup.exe")
+      - name: Calculate checksum
+        id: checksum
+        run: echo "::set-output name=checksum::$((CertUtil -hashfile setup.exe SHA256)[1] -replace ' ',''))"
+      - name: Insert data
+        uses: datamonsters/replace-action@v2
+        with:
+          files: "tools/chocolateyinstall.ps1,librewolf.nuspec"
+          replacements: "{{version}}=${{github.event.inputs.version}},{{file}}=${{github.event.inputs.file}},{{checksum}}=${{steps.checksum.outputs.checksum}}"
+      - name: Create .nupkg
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: pack
+      - name: Create release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: ${{github.event.inputs.version}}
+          files: |
+            librewolf.${{github.event.inputs.version}}.nupkg
