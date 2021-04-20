@@ -27,6 +27,10 @@ jobs:
         uses: crazy-max/ghaction-chocolatey@v1
         with:
           args: pack
+      - name: Publish to chocolatey
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: push librewolf.${{github.event.inputs.version}}.nupkg --source https://push.chocolatey.org/ -k ${{secrets.CHOCO_APIKEY}}
       - name: Create release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
