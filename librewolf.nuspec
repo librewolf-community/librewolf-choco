@@ -3,10 +3,17 @@
   <metadata>
     <id>librewolf</id>
     <version>{{version}}</version>
-    <title>librewolf (Install)</title>
-    <authors>Librewolf contributors</authors>
-    <projectUrl>https://gitlab.com/librewolf-community/browser/windows</projectUrl>
-    <tags>librewolf</tags>
+    <title>LibreWolf</title>
+    <authors>LibreWolf contributors</authors>
+    <projectUrl>https://librewolf-community.gitlab.io/</projectUrl>
+    <iconUrl>https://glcdn.rawgit.org/librewolf-community/branding/master/icon/icon.svg</iconUrl>
+    <licenseUrl>https://gitlab.com/librewolf-community/browser/windows/blob/master/LICENSE</licenseUrl>
+    <packageSourceUrl>https://github.com/maltejur/librewolf-choco</packageSourceUrl>
+    <releaseNotes>https://gitlab.com/librewolf-community/browser/windows/-/releases</releaseNotes>
+    <docsUrl>https://librewolf-community.gitlab.io/docs/</docsUrl>
+    <bugTrackerUrl>https://gitlab.com/librewolf-community/browser/windows/-/issues</bugTrackerUrl>
+    <projectSourceUrl>https://gitlab.com/librewolf-community/browser/windows</projectSourceUrl>
+    <tags>browser librewolf firefox</tags>
     <summary>A fork of Firefox, focused on privacy, security and freedom.</summary>
     <description>This project is an independent “fork” of Firefox, with the primary goals of privacy security and user freedom. It is the community run successor to [LibreFox](https://github.com/intika/Librefox)
 
@@ -24,7 +31,7 @@ LibreWolf is designed to minimize data collection and telemetry as much as possi
 - Multi-platform
 - Community-Driven</description>
     <dependencies>
-      <dependency id="vcredist140" />
+      <dependency id="vcredist140" version="14" />
     </dependencies>
   </metadata>
   <files>

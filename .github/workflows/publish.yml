@@ -18,7 +18,7 @@ jobs:
         run: (new-object System.Net.WebClient).DownloadFile("${{ github.event.inputs.file }}","setup.exe")
       - name: Calculate checksum
         id: checksum
-        run: echo "::set-output name=checksum::$((CertUtil -hashfile setup.exe SHA256)[1] -replace ' ',''))"
+        run: echo "::set-output name=checksum::$((CertUtil -hashfile setup.exe SHA256)[1] -replace ' ','')"
       - name: Insert data
         run: |
           (Get-Content librewolf.nuspec).replace('{{version}}', '${{github.event.inputs.version}}') | Set-Content librewolf.nuspec
