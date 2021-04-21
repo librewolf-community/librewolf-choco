@@ -31,7 +31,7 @@ LibreWolf is designed to minimize data collection and telemetry as much as possi
 - Multi-platform
 - Community-Driven</description>
     <dependencies>
-      <dependency id="vcredist140" version="14" />
+      <dependency id="vcredist140" version="14.0" />
     </dependencies>
   </metadata>
   <files>
