@@ -7,7 +7,7 @@
     <owners>maltejur</owners>
     <authors>LibreWolf contributors</authors>
     <projectUrl>https://librewolf-community.gitlab.io/</projectUrl>
-    <iconUrl>https://glcdn.rawgit.org/librewolf-community/branding/master/icon/icon.svg</iconUrl>
+    <iconUrl>https://glcdn.githack.com/librewolf-community/branding/-/raw/master/icon/icon.svg</iconUrl>
     <licenseUrl>https://gitlab.com/librewolf-community/browser/windows/blob/master/LICENSE</licenseUrl>
     <packageSourceUrl>https://github.com/maltejur/librewolf-choco</packageSourceUrl>
     <releaseNotes>https://gitlab.com/librewolf-community/browser/windows/-/releases</releaseNotes>
