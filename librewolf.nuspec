@@ -4,6 +4,7 @@
     <id>librewolf</id>
     <version>{{version}}</version>
     <title>LibreWolf</title>
+    <owners>maltejur</owners>
     <authors>LibreWolf contributors</authors>
     <projectUrl>https://librewolf-community.gitlab.io/</projectUrl>
     <iconUrl>https://glcdn.rawgit.org/librewolf-community/branding/master/icon/icon.svg</iconUrl>
