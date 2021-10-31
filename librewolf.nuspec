@@ -13,11 +13,11 @@
     <docsUrl>https://librewolf-community.gitlab.io/docs/</docsUrl>
     <bugTrackerUrl>https://gitlab.com/librewolf-community/browser/windows/-/issues</bugTrackerUrl>
     <projectSourceUrl>https://gitlab.com/librewolf-community/browser/windows</projectSourceUrl>
-    <tags>browser librewolf firefox</tags>
+    <tags>browser librewolf firefox fork</tags>
     <summary>A fork of Firefox, focused on privacy, security and freedom.</summary>
-    <description>This project is an independent “fork” of Firefox, with the primary goals of privacy security and user freedom. It is the community run successor to [LibreFox](https://github.com/intika/Librefox)
+    <description>This project is an independent fork of Firefox, with the primary goals of privacy, security and user freedom.
 
-LibreWolf is designed to minimize data collection and telemetry as much as possible. This is achieved through hundreds of privacy/security/performance settings and patches. Intrusive integrated addons including updater, crashreporter, and pocket are removed too.
+LibreWolf is designed to increase protection against tracking and fingerprinting techniques, while also including a few security improvements. This is achieved through our privacy and security oriented settings and patches. LibreWolf also aims to remove all the telemetry, data collection and annoyances, as well as disabling anti-freedom features like DRM.
 
 **LibreWolf is NOT associated with Mozilla or its products.**
 
