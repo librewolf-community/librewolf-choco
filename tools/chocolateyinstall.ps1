@@ -17,4 +17,12 @@ $packageArgs = @{
   validExitCodes= @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+try {
+  Install-ChocolateyPackage @packageArgs
+} catch  {
+  if($_.Exception.Message -match "Exit code was '2'") {
+    throw "The installer exited with code 2. This means LibreWolf is probably still running. Close LibreWolf and try again."
+  } else {
+    throw $_.Exception
+  }
+}
